@@ -27,6 +27,12 @@ flutter:
 
   assets:
   - images/mis_award.png
+  - images/faculty/janineelysearonson.jpg
+  - images/faculty/nicholasberente.jpg
+  - images/faculty/robertbostrom.jpg
+  - images/faculty/timothychester.jpg
+  - images/faculty/marie-claudeboudreau.jpg
+  - images/faculty/janineelysearonson.jpg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
