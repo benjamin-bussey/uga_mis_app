@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class Professor extends StatelessWidget {
+class Staff extends StatelessWidget {
   final String name, title, email, office;
 
-  Professor(this.name, this.title, this.email, this.office);
+  Staff(this.name, this.title, this.email, this.office);
 
   @override
   Widget build(BuildContext context) {
     double viewWidth = MediaQuery.of(context).size.width;
-    double viewHeight = MediaQuery.of(context).size.height;
 
     return Container(
       decoration: BoxDecoration(
@@ -44,9 +44,12 @@ class Professor extends StatelessWidget {
                         'Office: $office',
                         style: TextStyle(fontSize: 15.0),
                       ),
-                      Text(
-                        'Email: $email',
-                        style: TextStyle(fontSize: 15.0),
+                      GestureDetector(
+                        onTap: () => _email(email),
+                        child: Text(
+                          email,
+                          style: TextStyle(fontSize: 15.0, color: Colors.lightBlue, decoration: TextDecoration.underline),
+                        ),
                       ),
                     ],
                   ),
@@ -70,5 +73,15 @@ class Professor extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  _email(String email) async{
+    var url = 'mailto:$email';
+    if(await canLaunch(url)){
+      await launch(url);
+    }
+    else{
+      throw 'Could not launch $url';
+    }
   }
 }
