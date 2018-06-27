@@ -7,49 +7,67 @@ class Professor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        margin: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+    double viewWidth = MediaQuery.of(context).size.width;
+    double viewHeight = MediaQuery.of(context).size.height;
+
+    return Container(
+      decoration: BoxDecoration(
         color: Color(0xFFD6D2C4),
-        height: MediaQuery.of(context).size.height * 0.25,
-        width: MediaQuery.of(context).size.width * 0.95,
-        child: Row(
-          children: <Widget>[
-            Column(
-              children: <Widget>[
-                Padding(
+        borderRadius: BorderRadius.circular(5.0),
+        shape: BoxShape.rectangle,
+      ),
+      margin: EdgeInsets.fromLTRB(viewWidth * .05,
+          MediaQuery.of(context).size.height * .03, viewWidth * .05, 0.0),
+      height: MediaQuery.of(context).size.height * 0.30,
+      child: Row(
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              Container(
+                width: 250.0,
+                child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
-                    //TODO Shift text to the left for all non-name text widgets
                     children: <Widget>[
                       Text(
                         name,
-                        style: TextStyle(fontSize: 25.0),
+                        style: TextStyle(fontSize: 20.0),
                       ),
                       Text(
                         title,
                         style: TextStyle(
-                            fontSize: 18.0, fontWeight: FontWeight.bold, ),
+                          fontSize: 17.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       Text(
-                        office,
+                        'Office: $office',
                         style: TextStyle(fontSize: 15.0),
                       ),
                       Text(
-                        email,
+                        'Email: $email',
                         style: TextStyle(fontSize: 15.0),
                       ),
                     ],
                   ),
                 ),
-              ],
+              ),
+            ],
+          ),
+          Expanded(
+              child: Container(
+            decoration: BoxDecoration(
+              color: Color(0xFF9EA2A2),
+              borderRadius: BorderRadius.circular(5.0),
             ),
-            Image.asset(
-              './images/faculty/${name.toLowerCase().replaceAll(' ', '')}.jpg',
-              alignment: Alignment.topRight,
+            margin: const EdgeInsets.only(right: 7.5),
+            child: Image.asset(
+              './images/faculty/${name.toLowerCase().replaceAll(
+                      ' ', '')}.jpg',
+              alignment: Alignment.center,
             ),
-          ],
-        ),
+          ))
+        ],
       ),
     );
   }
