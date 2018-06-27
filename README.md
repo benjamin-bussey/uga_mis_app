@@ -11,4 +11,4 @@ View general information about the major, professors, and courses.
 For help getting started with Flutter, view the online
 [documentation](https://flutter.io/).
 
-To visit the MIS maipage, click[here](https://http://www.terry.uga.edu/academics/offices/management-information-systems)
+To visit the MIS maipage, click [here](https://http://www.terry.uga.edu/academics/offices/management-information-systems)
