@@ -27,7 +27,7 @@ flutter:
   uses-material-design: true
 
   assets:
-  - images/mis_award.png
+  - images/award_2018.png
   - images/faculty/janineelysearonson.jpg
   - images/faculty/nicholasberente.jpg
   - images/faculty/robertbostrom.jpg

@@ -124,7 +124,7 @@ class _AboutState extends State<About> {
           child: Column(
             children: <Widget>[
               Image.asset(
-                './images/mis_award.png',
+                './images/award_2018.png',
                 height: 150.0,
               ),
               Text(
