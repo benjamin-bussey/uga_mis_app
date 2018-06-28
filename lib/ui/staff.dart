@@ -16,8 +16,11 @@ class Staff extends StatelessWidget {
         borderRadius: BorderRadius.circular(5.0),
         shape: BoxShape.rectangle,
       ),
-      margin: EdgeInsets.fromLTRB(viewWidth * .05,
-          MediaQuery.of(context).size.height * .03, viewWidth * .05, 0.0),
+      margin: EdgeInsets.fromLTRB(
+          viewWidth * .05,
+          MediaQuery.of(context).size.height * .015,
+          viewWidth * .05,
+          MediaQuery.of(context).size.height * .015),
       height: MediaQuery.of(context).size.height * 0.30,
       child: Row(
         children: <Widget>[
@@ -29,9 +32,13 @@ class Staff extends StatelessWidget {
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
                     children: <Widget>[
-                      Text(
-                        name,
-                        style: TextStyle(fontSize: 20.0),
+                      GestureDetector(
+                        //TODO Implement popup
+                        onTap: () => debugPrint('Works'),
+                        child: Text(
+                          name,
+                          style: TextStyle(fontSize: 20.0),
+                        ),
                       ),
                       Text(
                         title,
@@ -44,11 +51,15 @@ class Staff extends StatelessWidget {
                         'Office: $office',
                         style: TextStyle(fontSize: 15.0),
                       ),
+                      //TODO implement popup
                       GestureDetector(
                         onTap: () => _email(email),
                         child: Text(
                           email,
-                          style: TextStyle(fontSize: 15.0, color: Colors.lightBlue, decoration: TextDecoration.underline),
+                          style: TextStyle(
+                              fontSize: 15.0,
+                              color: Colors.lightBlue,
+                              decoration: TextDecoration.underline),
                         ),
                       ),
                     ],
@@ -60,14 +71,17 @@ class Staff extends StatelessWidget {
           Expanded(
               child: Container(
             decoration: BoxDecoration(
-              color: Color(0xFF9EA2A2),
+              color: Color(0xFF554F47),
               borderRadius: BorderRadius.circular(5.0),
             ),
             margin: const EdgeInsets.only(right: 7.5),
-            child: Image.asset(
-              './images/faculty/${name.toLowerCase().replaceAll(
-                      ' ', '')}.jpg',
-              alignment: Alignment.center,
+            child: GestureDetector(
+              onTap: () => debugPrint('Implement'),
+              child: Image.asset(
+                './images/faculty/${name.toLowerCase().replaceAll(
+                        ' ', '')}.jpg',
+                alignment: Alignment.center,
+              ),
             ),
           ))
         ],
@@ -75,12 +89,11 @@ class Staff extends StatelessWidget {
     );
   }
 
-  _email(String email) async{
+  _email(String email) async {
     var url = 'mailto:$email';
-    if(await canLaunch(url)){
+    if (await canLaunch(url)) {
       await launch(url);
-    }
-    else{
+    } else {
       throw 'Could not launch $url';
     }
   }
