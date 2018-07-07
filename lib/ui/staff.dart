@@ -2,22 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Staff extends StatefulWidget {
-  List facultyData;
+  final List facultyData;
 
-  Staff(facultyData) {
-    this.facultyData = facultyData;
-  }
+  Staff(this.facultyData);
 
   @override
   _StaffState createState() => _StaffState(facultyData);
 }
 
 class _StaffState extends State<Staff> {
-  List _data;
+  final List _data;
 
-  _StaffState(List facultyData) {
-    _data = facultyData;
-  }
+  _StaffState(this._data);
 
   @override
   Widget build(BuildContext context) {
@@ -38,48 +34,49 @@ class _StaffState extends State<Staff> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                    child: Padding(
-                  padding: EdgeInsets.only(left: 10.0, top: 10.0),
-                  child: Column(
-                    children: <Widget>[
-                      GestureDetector(
-                        //TODO Implement popup
-                        onTap: () => _openBio(_data[index]['bio']),
-                        child: Text(
-                          _data[index]['name'],
-                          style: TextStyle(fontSize: 20.0),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10.0, top: 10.0),
+                    child: Column(
+                      children: <Widget>[
+                        GestureDetector(
+                          //TODO Implement popup
+                          onTap: () => _openBio(_data[index]['bio']),
+                          child: Text(
+                            _data[index]['name'],
+                            style: TextStyle(fontSize: 20.0),
+                          ),
                         ),
-                      ),
-                      Text(
-                        _data[index]['title'],
-                        style: TextStyle(
-                          fontSize: 17.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        'Office: ${_data[index]['office']}',
-                        style: TextStyle(fontSize: 15.0),
-                      ),
-                      //TODO implement popup
-                      GestureDetector(
-                        onTap: () => _email(_data[index]['email']),
-                        child: Text(
-                          _data[index]['email'],
+                        Text(
+                          _data[index]['title'],
                           style: TextStyle(
-                              fontSize: 15.0,
-                              color: Colors.lightBlue,
-                              decoration: TextDecoration.underline),
+                            fontSize: 17.0,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                )),
+                        Text(
+                          'Office: ${_data[index]['office']}',
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        //TODO implement popup
+                        GestureDetector(
+                          onTap: () => _email(_data[index]['email']),
+                          child: Text(
+                            _data[index]['email'],
+                            style: const TextStyle(
+                                fontSize: 15.0,
+                                color: Colors.lightBlue,
+                                decoration: TextDecoration.underline),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ),
                 Padding(
                   padding: EdgeInsets.all(10.0),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Color(0xFF554F47),
+                      color: const Color(0xFF554F47),
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                     margin: const EdgeInsets.only(right: 7.5),

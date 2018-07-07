@@ -6,13 +6,10 @@ import '../ui/about.dart';
 final bulldogRed = Color(0xFFBA0C2F);
 
 class Home extends StatefulWidget {
-  List facultyData;
-  List courseData;
+  final List facultyData;
+  final List courseData;
 
-  Home(List facultyData, List courseData) {
-    this.facultyData = facultyData;
-    this.courseData = courseData;
-  }
+  Home(this.facultyData, this.courseData);
 
   @override
   _HomeState createState() => _HomeState(facultyData, courseData);
@@ -39,7 +36,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MIS - Terry College of Business'),
+        title: const Text('MIS - Terry College of Business'),
         centerTitle: true,
         backgroundColor: bulldogRed,
       ),
@@ -53,19 +50,19 @@ class _HomeState extends State<Home> {
           });
         },
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Home'),
+          const BottomNavigationBarItem(
+            icon: const Icon(Icons.home),
+            title: const Text('Home'),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text(
+          const BottomNavigationBarItem(
+            icon: const Icon(Icons.person),
+            title: const Text(
               'Faculty',
             ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            title: Text('Courses'),
+          const BottomNavigationBarItem(
+            icon: const Icon(Icons.book),
+            title: const Text('Courses'),
           ),
         ],
         fixedColor: bulldogRed,
