@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Course extends StatefulWidget {
-  List courseData;
+  final List courseData;
 
-  Course(courseData) {
-    this.courseData = courseData;
-  }
+  Course(this.courseData);
 
   @override
   _CourseState createState() => _CourseState(courseData);
@@ -23,8 +21,8 @@ class _CourseState extends State<Course> {
 
   @override
   Widget build(BuildContext context) {
-    double viewWidth = MediaQuery.of(context).size.width;
-    double viewHeight = MediaQuery.of(context).size.height;
+    final viewWidth = MediaQuery.of(context).size.width;
+    final viewHeight = MediaQuery.of(context).size.height;
 
     return ListView.builder(
         itemCount: _data[0].length,
@@ -47,14 +45,12 @@ class _CourseState extends State<Course> {
                         Center(
                           child: Text(
                             '${_data[0][index]['name']} (${_data[0][index]['abbrev']})',
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 18.0, fontWeight: FontWeight.bold),
                           ),
                         ),
-                        Divider(
-                          color: Colors.black,
-                        ),
-                        Padding(padding: EdgeInsets.only(top: 3.0)),
+                        const Divider(color: Colors.black,),
+                        const Padding(padding: EdgeInsets.only(top: 3.0)),
                         Text(
                           //Removing newlines in text
                           _data[0][index]['information']
@@ -63,7 +59,7 @@ class _CourseState extends State<Course> {
                           style: TextStyle(fontSize: 14.5),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 5.0),
+                          margin: const EdgeInsets.only(top: 5.0),
                           alignment: Alignment.bottomRight,
                           child: Text(
                             _data[0][index]['level'],

@@ -12,7 +12,7 @@ class Organization extends StatelessWidget {
 
     return Container(
         decoration: BoxDecoration(
-          color: Color(0xFFD6D2C4),
+          color: const Color(0xFFD6D2C4),
           borderRadius: BorderRadius.circular(5.0),
           shape: BoxShape.rectangle,
         ),
@@ -22,7 +22,7 @@ class Organization extends StatelessWidget {
             viewWidth * .05,
             MediaQuery.of(context).size.height * .015),
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             children: <Widget>[
               Center(
@@ -31,18 +31,18 @@ class Organization extends StatelessWidget {
                   style: TextStyle(fontSize: 25.0),
                 ),
               ),
-              Padding(padding: EdgeInsets.only(top: 3.0)),
+              Padding(padding: const EdgeInsets.only(top: 3.0)),
               Text(
                 information,
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0),
+                style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0),
               ),
               Container(
-                margin: EdgeInsets.only(top: 5.0),
+                margin: const EdgeInsets.only(top: 5.0),
                 alignment: Alignment.centerLeft,
                 child: MaterialButton(
                   onPressed: () => _apply(),
-                  color: Color(0xFFBA0C2F),
-                  child: Text(
+                  color: const Color(0xFFBA0C2F),
+                  child: const Text(
                     'Learn More',
                     style: TextStyle(color: Color(0xFFFFFFFF)),
                   ),

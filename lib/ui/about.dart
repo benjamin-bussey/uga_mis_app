@@ -44,17 +44,15 @@ class _AboutState extends State<About> {
       children: <Widget>[
         Padding(padding: const EdgeInsets.all(10.0)),
         Center(
-          child: Text(
+          child: const Text(
             "About MIS",
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 30.2,
-                fontWeight: FontWeight.w400),
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 30.2,
+              fontWeight: FontWeight.w400),
           ),
         ),
-        Divider(
-          color: Colors.black,
-        ),
+        const Divider(color: Colors.black,),
         Padding(
           padding: const EdgeInsets.all(25.0),
           child: Column(
@@ -63,29 +61,24 @@ class _AboutState extends State<About> {
                 './images/award_2018.png',
                 height: 150.0,
               ),
-              Text(
+              const Text(
                 'Management Information Systems (MIS) is a hands-on major which equips students with real-world skills that are in demand in the job market. Our program prepares students to lead IT-enabled change in organizations.',
                 style: TextStyle(fontSize: 15.5),
               ),
-              Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      0.0, 10.0, 0.0, 0.0)),
-              Text(
+              const Padding(padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0)),
+              const Text(
                 'The Terry MIS program provides the foundation for students to go in a technical direction (such as a programmer or database administrator), a non-technical direction (such as a business process analyst or project manager), or somewhere in the middle (such as a business intelligence or IT risk & security specialist).',
                 style: TextStyle(fontSize: 15.5),
               ),
-              Padding(
-                  padding:
-                  EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0)),
-              Center(
+              const Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0)),
+              const Center(
                 child: Text(
                   'Degree Programs',
                   style: TextStyle(fontSize: 30.2),
                 ),
               ),
-              Divider(
-                color: Colors.black,
-              ),
+              const Divider(color: Colors.black,),
               Column(
                 children: <Widget>[
                   undergrad,
@@ -94,18 +87,16 @@ class _AboutState extends State<About> {
                   phd,
                 ],
               ),
-              Padding(
-                  padding:
-                  EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0)),
-              Center(
+              const Padding(
+                padding:
+                EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0)),
+              const Center(
                 child: Text(
                   'Student Organizations',
                   style: TextStyle(fontSize: 30.2),
                 ),
               ),
-              Divider(
-                color: Colors.black,
-              ),
+              const Divider(color: Colors.black,),
               Column(
                 children: <Widget>[
                   smis,
