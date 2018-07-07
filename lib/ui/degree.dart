@@ -38,7 +38,10 @@ class Degree extends StatelessWidget {
                   style: TextStyle(fontSize: 12.0),
                 ),
               ),
-              Text(information, style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0),),
+              Text(
+                information,
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0),
+              ),
               Container(
                 margin: EdgeInsets.only(top: 5.0),
                 alignment: Alignment.centerLeft,

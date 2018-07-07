@@ -28,33 +28,7 @@ flutter:
 
   assets:
   - images/award_2018.png
-  - images/faculty/janineelysearonson.jpg
-  - images/faculty/nicholasberente.jpg
-  - images/faculty/robertbostrom.jpg
-  - images/faculty/timothychester.jpg
-  - images/faculty/marie-claudeboudreau.jpg
-  - images/faculty/janineelysearonson.jpg
-  - images/faculty/marie-claudeboudreau.jpg
-  - images/faculty/debabrotochatterjee.jpg
-  - images/faculty/dalegoodhue.jpg
-  - images/faculty/ilirhasko.jpg
-  - images/faculty/danieleverett.jpg
-  - images/faculty/markhuber.jpg
-  - images/faculty/elenakarahanna.jpg
-  - images/faculty/jeffreyhowells.jpg
-  - images/faculty/weifengli.jpg
-  - images/faculty/craigallanpiercy.jpg
-  - images/faculty/hanisafadi.jpg
-  - images/faculty/patrickmckeown.jpg
-  - images/faculty/amrittiwana.jpg
-  - images/faculty/nikhilsrinivasan.jpg
-  - images/faculty/aaronschecter.jpg
-  - images/faculty/richardthomaswatson.jpg
-  - images/faculty/hughjameswatson.jpg
-  - images/faculty/astridlipp.jpg
-  - images/faculty/victorlawson.jpg
-  - images/faculty/emilykianka.jpg
-  - images/faculty/beckycurry.jpg
+  - images/faculty/noimage.jpg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

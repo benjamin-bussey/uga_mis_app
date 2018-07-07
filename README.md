@@ -3,6 +3,8 @@
 A Flutter application delivering information about the UGA Management Information System major.
 Check out the [Youtube Video](https://www.youtube.com/watch?v=19AlyMmH1dQ&feature=youtu.be)
 
+[Walkthrough](https://imgur.com/SiasWQy)
+
 ##Functionality
 
 View general information about the major, professors, and courses.

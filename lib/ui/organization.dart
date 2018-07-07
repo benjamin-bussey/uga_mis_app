@@ -32,7 +32,10 @@ class Organization extends StatelessWidget {
                 ),
               ),
               Padding(padding: EdgeInsets.only(top: 3.0)),
-              Text(information, style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0),),
+              Text(
+                information,
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0),
+              ),
               Container(
                 margin: EdgeInsets.only(top: 5.0),
                 alignment: Alignment.centerLeft,
